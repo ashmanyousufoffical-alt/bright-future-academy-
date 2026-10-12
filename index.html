@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore courses, check admission eligibility and calculate fees at Bright Future Academy.">
+  <title>Bright Future Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">Bright<span>Future</span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#courses">Courses</a>
+      <a href="#admission">Admission</a><a href="#fees">Fee Calculator</a>
+    </nav>
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">🌙</button>
+  </header>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="tag">LEARN TODAY, LEAD TOMORROW</span>
+        <h1>Build Your Future With <span>Digital Skills</span></h1>
+        <p>Learn Web Development, Graphic Design, AI and Freelancing with practical, career-focused courses.</p>
+        <a href="#admission" class="btn">Check Eligibility</a>
+        <a href="#courses" class="btn btn-outline">Explore Courses</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon">🎓</div><h2>Your Future Starts Here</h2>
+        <p>Learn new skills. Build real projects. Grow your career.</p>
+        <div class="hero-stats"><div><strong>4</strong><small>Courses</small></div><div><strong>100%</strong><small>Skill Focus</small></div></div>
+      </div>
+    </section>
+    <section id="courses" class="section">
+      <div class="section-heading"><span class="tag">OUR PROGRAMS</span><h2>Explore Our Courses</h2><p>Choose a skill that matches your goals.</p></div>
+      <div class="course-grid">
+        <article class="course-card"><div class="course-icon">💻</div><h3>Web Development</h3><p>Learn HTML, CSS, JavaScript and how to build websites.</p><strong>Rs. 5,000 <small>/ month</small></strong><a href="#fees" class="course-link">Calculate Fee →</a></article>
+        <article class="course-card"><div class="course-icon">🎨</div><h3>Graphic Design</h3><p>Learn visual design, branding, layouts and creative tools.</p><strong>Rs. 4,000 <small>/ month</small></strong><a href="#fees" class="course-link">Calculate Fee →</a></article>
+        <article class="course-card"><div class="course-icon">🤖</div><h3>AI Course</h3><p>Explore AI tools, prompting and practical AI applications.</p><strong>Rs. 7,000 <small>/ month</small></strong><a href="#fees" class="course-link">Calculate Fee →</a></article>
+        <article class="course-card"><div class="course-icon">🚀</div><h3>Freelancing</h3><p>Learn client communication, proposals and online work basics.</p><strong>Rs. 3,500 <small>/ month</small></strong><a href="#fees" class="course-link">Calculate Fee →</a></article>
+      </div>
+    </section>
+    <section id="admission" class="section feature-section">
+      <div class="section-heading"><span class="tag">START LEARNING</span><h2>Admission Eligibility Checker</h2><p>Enter your details to check your eligibility.</p></div>
+      <form id="admissionForm" class="form-card">
+        <div class="form-group"><label for="studentName">Student Name</label><input type="text" id="studentName" placeholder="Enter your full name" required minlength="2" maxlength="60"></div>
+        <div class="form-group"><label for="marks">Marks Percentage (0–100)</label><input type="number" id="marks" placeholder="e.g. 75" min="0" max="100" step="any" required></div>
+        <div class="form-group"><label for="admissionCourse">Select Course</label><select id="admissionCourse" required><option value="">Choose a course</option><option>Web Development</option><option>Graphic Design</option><option>AI Course</option><option>Freelancing</option></select></div>
+        <button type="submit" class="btn full-btn">Check My Eligibility</button>
+        <div id="eligibilityResult" class="result" role="status" aria-live="polite" hidden></div>
+      </form>
+    </section>
+    <section id="fees" class="section">
+      <div class="section-heading"><span class="tag">PLAN YOUR BUDGET</span><h2>Course Fee Calculator</h2><p>Calculate your total fee and available discount.</p></div>
+      <form id="feeForm" class="form-card">
+        <div class="form-group"><label for="feeCourse">Select Course</label><select id="feeCourse" required><option value="5000">Web Development — Rs. 5,000/month</option><option value="4000">Graphic Design — Rs. 4,000/month</option><option value="7000">AI Course — Rs. 7,000/month</option><option value="3500">Freelancing — Rs. 3,500/month</option></select></div>
+        <div class="form-group"><label for="months">Course Duration</label><select id="months" required><option value="1">1 Month</option><option value="2">2 Months</option><option value="3">3 Months</option><option value="4">4 Months</option><option value="5">5 Months</option><option value="6">6 Months</option><option value="9">9 Months</option><option value="12">12 Months</option></select></div>
+        <button type="submit" class="btn full-btn">Calculate My Fee</button>
+        <div id="feeResult" class="fee-result" hidden role="status" aria-live="polite"><h3>Fee Summary</h3><div class="fee-row"><span>Original Fee</span><strong id="originalFee">Rs. 0</strong></div><div class="fee-row"><span>Discount</span><strong id="discount">Rs. 0</strong></div><div class="fee-row total-row"><span>Final Fee</span><strong id="finalFee">Rs. 0</strong></div><p id="discountMessage"></p></div>
+      </form>
+    </section>
+    <section class="cta"><h2>Ready to Start Your Journey?</h2><p>Choose a course, check your eligibility and plan your fees.</p><a href="#admission" class="btn btn-light">Get Started</a></section>
+  </main>
+  <footer><a href="#home" class="logo">Bright<span>Future</span></a><p>Learn skills. Create opportunities. Shape your future.</p><p class="copyright">© <span id="year"></span> Bright Future Academy. Student project.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
